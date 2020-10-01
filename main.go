@@ -126,6 +126,15 @@ func draw(w *gfx.WinDraw) {
 	mat := worldToFrame()
     drawBots(w, botTex, mat)
     drawArrows(w, arrowTex, mat)
+
+    if botHeld {
+        for i, id := range bots.id {
+            if id == botHeldId {
+                bots.brain[i].draw(w, circleTex)
+                break
+            }
+        }
+    }
 }
 
 func main() {

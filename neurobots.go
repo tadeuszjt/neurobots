@@ -5,7 +5,6 @@ import (
 	"github.com/tadeuszjt/geom/32"
 	"github.com/tadeuszjt/gfx"
     "github.com/tadeuszjt/neuralnetwork"
-    "sync"
 )
 
 const (
@@ -74,6 +73,8 @@ func start() {
 
 func update() {
 	for i := range bots.ori {
+        bots.brain[i].network.ClearInputs()
+
 		for j := range bots.ori {
 			if i == j {
 				continue
@@ -101,25 +102,21 @@ func update() {
 		}
 	}
 
-    var wg sync.WaitGroup
-    wg.Add(len(bots.brain))
     for i := range bots.brain {
-        go func(){
-            bots.brain[i].network.Process()
-            bots.col[i].R = bots.brain[i].network.Outputs()[0]
-            wg.Done()
-        }()
+        bots.brain[i].network.Process()
     }
-    wg.Wait()
 
-	if botsPause {
-		return
-	}
-
-	for i := range bots.ori {
-		bots.ori[i].PlusEquals(bots.dir[i].ScaledBy(botsSpeed).Ori2())
+    for i := range bots.dir {
+        output := bots.brain[i].network.Outputs()[1] - bots.brain[i].network.Outputs()[0]
+        bots.dir[i] = bots.dir[i].RotatedBy(output * 0.01)
 		bots.ori[i].Theta = bots.dir[i].Theta()
-	}
+    }
+
+	if !botsPause {
+        for i := range bots.ori {
+            bots.ori[i].PlusEquals(bots.dir[i].ScaledBy(botsSpeed).Ori2())
+        }
+    }
 }
 
 func drawBots(w *gfx.WinDraw, tex gfx.TexID, mat geom.Mat3) {
