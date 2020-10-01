@@ -1,0 +1,67 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+Append	brain.go	/^func (s *SliceBrain) Append(t interface{}) {$/;"	f	unknown:main.SliceBrain
+Append	slicecolour.go	/^func (s *SliceColour) Append(item interface{}) {$/;"	f	unknown:main.SliceColour
+BotBrain	brain.go	/^type BotBrain struct {$/;"	s	package:main
+Delete	brain.go	/^func (s *SliceBrain) Delete(i int) {$/;"	f	unknown:main.SliceBrain
+Delete	slicecolour.go	/^func (s *SliceColour) Delete(i int) {$/;"	f	unknown:main.SliceColour
+Len	brain.go	/^func (s *SliceBrain) Len() int {$/;"	f	unknown:main.SliceBrain	typeref:typename:int
+Len	slicecolour.go	/^func (s *SliceColour) Len() int {$/;"	f	unknown:main.SliceColour	typeref:typename:int
+SliceBrain	brain.go	/^type SliceBrain []BotBrain$/;"	t	package:main
+SliceColour	slicecolour.go	/^type SliceColour []gfx.Colour$/;"	t	package:main
+Swap	brain.go	/^func (s *SliceBrain) Swap(i, j int) {$/;"	f	unknown:main.SliceBrain
+Swap	slicecolour.go	/^func (s *SliceColour) Swap(i, j int) {$/;"	f	unknown:main.SliceColour
+addBot	neurobots.go	/^func addBot(ori geom.Ori2, dir geom.Vec2, fed float32, col gfx.Colour) {$/;"	f	package:main
+arena	neurobots.go	/^	arena = geom.RectCentred(2000, 2000)$/;"	v	package:main
+arrowTex	main.go	/^	arrowTex   gfx.TexID$/;"	v	package:main
+arrowWidth	arrows.go	/^	arrowWidth = 32$/;"	c	package:main
+arrows	arrows.go	/^	arrows = []struct{ start, end geom.Vec2 }{}$/;"	v	package:main
+botHeld	neurobots.go	/^	botHeld   = false$/;"	v	package:main
+botHeldId	neurobots.go	/^	botHeldId = 0$/;"	v	package:main
+botIds	neurobots.go	/^	botIds    = 0$/;"	v	package:main
+botTex	main.go	/^	botTex     gfx.TexID$/;"	v	package:main
+bots	neurobots.go	/^	bots struct {$/;"	v	package:main
+botsBreedOdds	neurobots.go	/^	botsBreedOdds   = 1400$/;"	c	package:main
+botsEatRadius	neurobots.go	/^	botsEatRadius   = 30$/;"	c	package:main
+botsFedBleed	neurobots.go	/^	botsFedBleed    = 0.3$/;"	c	package:main
+botsNumSensors	neurobots.go	/^	botsNumSensors  = 8$/;"	c	package:main
+botsPause	neurobots.go	/^	botsPause = true$/;"	v	package:main
+botsSightRadius	neurobots.go	/^	botsSightRadius = 200$/;"	c	package:main
+botsSightWidth	neurobots.go	/^	botsSightWidth  = 2$/;"	c	package:main
+botsSpeed	neurobots.go	/^	botsSpeed       = 1$/;"	c	package:main
+botsStart	neurobots.go	/^	botsStart       = 100$/;"	c	package:main
+botsStartFed	neurobots.go	/^	botsStartFed    = 100.$/;"	c	package:main
+botsT	neurobots.go	/^	botsT = data.Table{$/;"	v	package:main
+camPos	main.go	/^	camPos     geom.Vec2$/;"	v	package:main
+camRect	main.go	/^func camRect() geom.Rect {$/;"	f	package:main	typeref:typename:geom.Rect
+camZoom	main.go	/^	camZoom    = float32(1)$/;"	v	package:main
+circleTex	main.go	/^	circleTex  gfx.TexID$/;"	v	package:main
+draw	main.go	/^func draw(w *gfx.WinDraw) {$/;"	f	package:main
+drawArrows	arrows.go	/^func drawArrows(w *gfx.WinDraw, arrowTex gfx.TexID, mat geom.Mat3) {$/;"	f	package:main
+drawBots	neurobots.go	/^func drawBots(w *gfx.WinDraw, tex gfx.TexID, mat geom.Mat3) {$/;"	f	package:main
+frameRect	main.go	/^	frameRect  geom.Rect$/;"	v	package:main
+frameToWorld	main.go	/^func frameToWorld() geom.Mat3 {$/;"	f	package:main	typeref:typename:geom.Mat3
+keyboard	main.go	/^func keyboard(w *gfx.Win, ev gfx.KeyEvent) {$/;"	f	package:main
+main	arrows.go	/^package main$/;"	p
+main	brain.go	/^package main$/;"	p
+main	main.go	/^func main() {$/;"	f	package:main
+main	main.go	/^package main$/;"	p
+main	neurobots.go	/^package main$/;"	p
+main	slicecolour.go	/^package main$/;"	p
+mouse	main.go	/^func mouse(w *gfx.Win, event gfx.MouseEvent) {$/;"	f	package:main
+mouseHeld	main.go	/^	mouseHeld  bool$/;"	v	package:main
+mousePos	main.go	/^	mousePos   geom.Vec2$/;"	v	package:main
+mouseWorld	main.go	/^	mouseWorld geom.Vec2$/;"	v	package:main
+network	brain.go	/^    network nn.NeuralNetwork$/;"	m	struct:main.BotBrain	typeref:typename:nn.NeuralNetwork
+sensors	brain.go	/^	sensors [botsNumSensors]float32$/;"	m	struct:main.BotBrain	typeref:typename:[botsNumSensors]float32
+setup	main.go	/^func setup(w *gfx.Win) error {$/;"	f	package:main	typeref:typename:error
+size	main.go	/^func size(w, h int) {$/;"	f	package:main
+spawnPred	neurobots.go	/^func spawnPred() {$/;"	f	package:main
+start	neurobots.go	/^func start() {$/;"	f	package:main
+update	neurobots.go	/^func update() {$/;"	f	package:main
+worldToFrame	main.go	/^func worldToFrame() geom.Mat3 {$/;"	f	package:main	typeref:typename:geom.Mat3
